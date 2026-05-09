@@ -1,29 +1,11 @@
-import { useState,useEffect } from "react"
+import { useEffect, useState } from "react";
 
-function App() {
-
-  const [time,setTime] = useState(new Date())
+export default function Four() {
+  const [time, setTime] = useState(new Date());
 
   useEffect(() => {
+    setInterval(() => setTime(new Date()), 1000);
+  }, []);
 
-    setInterval(() => {
-
-      setTime(new Date())
-
-    },1000)
-
-  },[])
-
-  return (
-
-    <div>
-
-      <h1>{time.toLocaleTimeString()}</h1>
-
-    </div>
-
-  )
-
+  return <h2>{time.toLocaleTimeString()}</h2>;
 }
-
-export default App

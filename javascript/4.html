@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Running Clock</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.clock{
+    width:300px;
+    padding:30px;
+    border:2px solid black;
+    text-align:center;
+    font-size:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="clock" id="clock">
+
+</div>
+
+<script>
+
+function showTime(){
+
+let date=new Date();
+
+let time=date.toLocaleTimeString();
+
+document.getElementById("clock").innerHTML=time;
+
+}
+
+setInterval(showTime,1000);
+
+showTime();
+
+</script>
+
+</body>
+</html>

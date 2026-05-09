@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Maruti Survey</title>
+
+<style>
+
+body{
+    font-family:Arial;
+}
+
+form{
+    width:70%;
+    margin:auto;
+    margin-top:50px;
+    padding:30px;
+    border:2px solid black;
+    text-align:center;
+}
+
+select{
+    width:250px;
+    padding:10px;
+    font-size:18px;
+    margin:10px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+}
+
+table{
+    width:100%;
+    margin-top:30px;
+    border-collapse:collapse;
+}
+
+th,td{
+    border:1px solid black;
+    padding:10px;
+    text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form>
+
+<h1>Maruti Car Survey</h1>
+
+<select id="city">
+
+<option>Delhi</option>
+<option>Mumbai</option>
+<option>Chennai</option>
+<option>Kolkatta</option>
+
+</select>
+
+<select id="car">
+
+<option>Maruti-K10</option>
+<option>Zen-Astelo</option>
+<option>Wagnor</option>
+<option>Maruti-SX4</option>
+
+</select>
+
+<br><br>
+
+<button type="button" onclick="addData()">Add</button>
+
+<table>
+
+<tr>
+
+<th>City</th>
+<th>Maruti-K10</th>
+<th>Zen-Astelo</th>
+<th>Wagnor</th>
+<th>Maruti-SX4</th>
+<th>Total</th>
+
+</tr>
+
+<tr>
+
+<td>Delhi</td>
+<td id="d1">0</td>
+<td id="d2">0</td>
+<td id="d3">0</td>
+<td id="d4">0</td>
+<td id="dt">0</td>
+
+</tr>
+
+<tr>
+
+<td>Mumbai</td>
+<td id="m1">0</td>
+<td id="m2">0</td>
+<td id="m3">0</td>
+<td id="m4">0</td>
+<td id="mt">0</td>
+
+</tr>
+
+<tr>
+
+<td>Chennai</td>
+<td id="c1">0</td>
+<td id="c2">0</td>
+<td id="c3">0</td>
+<td id="c4">0</td>
+<td id="ct">0</td>
+
+</tr>
+
+<tr>
+
+<td>Kolkatta</td>
+<td id="k1">0</td>
+<td id="k2">0</td>
+<td id="k3">0</td>
+<td id="k4">0</td>
+<td id="kt">0</td>
+
+</tr>
+
+</table>
+
+</form>
+
+<script>
+
+function addData(){
+
+let city=document.getElementById("city").value;
+
+let car=document.getElementById("car").value;
+
+let id="";
+let total="";
+
+if(city=="Delhi"){
+
+total="dt";
+
+if(car=="Maruti-K10") id="d1";
+if(car=="Zen-Astelo") id="d2";
+if(car=="Wagnor") id="d3";
+if(car=="Maruti-SX4") id="d4";
+
+}
+
+if(city=="Mumbai"){
+
+total="mt";
+
+if(car=="Maruti-K10") id="m1";
+if(car=="Zen-Astelo") id="m2";
+if(car=="Wagnor") id="m3";
+if(car=="Maruti-SX4") id="m4";
+
+}
+
+if(city=="Chennai"){
+
+total="ct";
+
+if(car=="Maruti-K10") id="c1";
+if(car=="Zen-Astelo") id="c2";
+if(car=="Wagnor") id="c3";
+if(car=="Maruti-SX4") id="c4";
+
+}
+
+if(city=="Kolkatta"){
+
+total="kt";
+
+if(car=="Maruti-K10") id="k1";
+if(car=="Zen-Astelo") id="k2";
+if(car=="Wagnor") id="k3";
+if(car=="Maruti-SX4") id="k4";
+
+}
+
+let count=document.getElementById(id).innerHTML;
+
+document.getElementById(id).innerHTML=parseInt(count)+1;
+
+let totalCount=document.getElementById(total).innerHTML;
+
+document.getElementById(total).innerHTML=parseInt(totalCount)+1;
+
+}
+
+</script>
+
+</body>
+</html>

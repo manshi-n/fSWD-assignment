@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            min-height:100vh;
+            background:linear-gradient(135deg,#141E30,#243B55);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        .container{
+            width:90%;
+            max-width:900px;
+            background:white;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:40px;
+            color:#222;
+            font-size:42px;
+            letter-spacing:1px;
+        }
+
+        .practical-box{
+            display:flex;
+            flex-direction:column;
+            gap:25px;
+        }
+
+        .card{
+            background:linear-gradient(135deg,#ff512f,#dd2476);
+            padding:25px;
+            border-radius:15px;
+            text-decoration:none;
+            color:white;
+            font-size:22px;
+            font-weight:bold;
+            transition:0.4s;
+            box-shadow:0 5px 15px rgba(0,0,0,0.2);
+            position:relative;
+            overflow:hidden;
+        }
+
+        .card::before{
+            content:"";
+            position:absolute;
+            top:0;
+            left:-100%;
+            width:100%;
+            height:100%;
+            background:rgba(255,255,255,0.2);
+            transition:0.5s;
+        }
+
+        .card:hover::before{
+            left:100%;
+        }
+
+        .card:hover{
+            transform:translateY(-8px) scale(1.02);
+            box-shadow:0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:32px;
+            }
+
+            .card{
+                font-size:18px;
+                padding:20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>JavaScript Practicals</h1>
+
+        <div class="practical-box">
+
+            <a href="1.html" class="card">
+                1. Credit Card Validation
+            </a>
+
+            <a href="2.html" class="card">
+                2. Email and Password Validation
+            </a>
+
+            <a href="3.html" class="card">
+                3. Telephone Number
+            </a>
+
+            <a href="4.html" class="card">
+                4. Running Clock
+            </a>
+
+            <a href="5.html" class="card">
+                5. Maruti survey
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Validation Form</title>
+
+<style>
+
+body{
+    font-family:Arial;
+}
+
+form{
+    width:40%;
+    margin:auto;
+    margin-top:80px;
+    padding:30px;
+    border:2px solid black;
+    text-align:center;
+}
+
+h1{
+    text-align:center;
+}
+
+input{
+    width:80%;
+    padding:10px;
+    margin:10px;
+    font-size:18px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form>
+
+<h1>Validation Form</h1>
+
+<input type="text" id="name" placeholder="Enter Name">
+
+<br>
+
+<input type="text" id="email" placeholder="Enter Email">
+
+<br>
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<br><br>
+
+<button type="button" onclick="validateForm()">Validate</button>
+
+<h2 id="result"></h2>
+
+</form>
+
+<script>
+
+function validateForm(){
+
+let name=document.getElementById("name").value;
+
+let email=document.getElementById("email").value;
+
+let password=document.getElementById("password").value;
+
+let namePattern=/^[A-Za-z ]+$/;
+
+let emailPattern=/^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+let passwordPattern=/^(?=.*[A-Z])(?=.*[0-9]).{6,}$/;
+
+if(!namePattern.test(name)){
+
+document.getElementById("result").innerHTML="Invalid Name";
+
+}
+
+else if(!emailPattern.test(email)){
+
+document.getElementById("result").innerHTML="Invalid Email";
+
+}
+
+else if(!passwordPattern.test(password)){
+
+document.getElementById("result").innerHTML="Invalid Password";
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="All Details Valid";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

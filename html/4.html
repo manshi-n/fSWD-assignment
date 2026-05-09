@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Hotel Form</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#f4f4f4;
+}
+
+form{
+    width:50%;
+    margin:auto;
+    margin-top:50px;
+    padding:30px;
+    border:3px solid black;
+    border-radius:10px;
+    background:white;
+    font-size:22px;
+}
+
+h1{
+    text-align:center;
+    font-size:40px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select{
+    width:70%;
+    padding:10px;
+    font-size:18px;
+    margin-top:10px;
+}
+
+input[type="radio"],
+input[type="checkbox"]{
+    transform:scale(1.3);
+    margin-right:8px;
+}
+
+input[type="submit"]{
+    padding:10px 25px;
+    font-size:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Hotel Form</h1>
+
+<form>
+
+Name:
+<input type="text"><br><br>
+
+Address:
+<textarea></textarea><br><br>
+
+Age:
+<input type="number"><br><br>
+
+Gender:
+
+<input type="radio" name="g">Male
+
+<input type="radio" name="g">Female
+
+<br><br>
+
+Room Type:
+
+<select>
+<option>A/C</option>
+<option>Non A/C</option>
+<option>Deluxe</option>
+</select>
+
+<br><br>
+
+Payment:
+
+<input type="checkbox">Cash
+
+<input type="checkbox">Card
+
+<input type="checkbox">Coupon
+
+<br><br>
+
+<input type="submit">
+
+</form>
+
+</body>
+</html>

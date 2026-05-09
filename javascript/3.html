@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Telephone Number Split</title>
+
+<style>
+
+body{
+    font-family:Arial;
+}
+
+form{
+    width:40%;
+    margin:auto;
+    margin-top:80px;
+    padding:30px;
+    border:2px solid black;
+    text-align:center;
+}
+
+input{
+    width:80%;
+    padding:10px;
+    margin:10px;
+    font-size:18px;
+}
+
+button{
+    padding:10px 20px;
+    font-size:18px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<form>
+
+<h1>Telephone Number Split</h1>
+
+<input type="text" id="phone" placeholder="Enter Phone Number">
+
+<br>
+
+<button type="button" onclick="splitNumber()">Split</button>
+
+<br><br>
+
+<input type="text" id="area" placeholder="Area Code">
+
+<input type="text" id="number" placeholder="Phone Number">
+
+</form>
+
+<script>
+
+function splitNumber(){
+
+let phone=document.getElementById("phone").value;
+
+let parts=phone.split(")");
+
+let area=parts[0].replace("(","");
+
+let number=parts[1].replace("-","");
+
+document.getElementById("area").value=area;
+
+document.getElementById("number").value=number;
+
+}
+
+</script>
+
+</body>
+</html>

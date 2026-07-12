@@ -2,10 +2,16 @@
 $user = "admin";
 $pass = "123";
 
-if($_POST['uid']==$user && $_POST['pwd']==$pass){
-    echo "Welcome User";
+if(isset($_POST['uid']) && isset($_POST['pwd'])) {
+    $uid = filter_var($_POST['uid'], FILTER_SANITIZE_STRING);
+    $pwd = $_POST['pwd'];
+    if($uid == $user && $pwd == $pass){
+        echo "Welcome User";
+    } else {
+        echo "Invalid Login";
+    }
 } else {
-    echo "Invalid Login";
+    echo "Please fill in the form";
 }
 ?>
 
